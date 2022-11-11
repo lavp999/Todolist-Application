@@ -10,3 +10,41 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cajaBlanca{
+    width: 450px;
+    height: 600px;
+    background-color: rgb(212, 212, 219);
+    margin:0px auto;
+    margin-top: 50px;
+}
+
+.titulo{
+    text-align: center; 
+    padding-top: 10px;
+    font-size: xx-large;
+    color: aliceblue;
+    border: 1px solid red;
+}
+
+.tarjeta{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(254, 255, 255);
+    margin-left: 25px;
+    border-radius: 5px;
+    border: 1px solid red;
+}
+
+.cajaInput{
+    background-color: rgb(231, 237, 237);
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 0px;
+    
+}
