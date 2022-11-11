@@ -4,7 +4,9 @@ const ElementoLista = (props) => {
 
 	return (
 		<div>
-			{props.lista}
+			{props.lista.map(function(elemento){
+                return (<div> {elemento} </div>);
+            })}
 		</div>
 	);
 };
