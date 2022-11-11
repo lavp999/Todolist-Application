@@ -3,11 +3,16 @@ import React from "react";
 const ElementoLista = (props) => {
 
 	return (
-		<div>
 			{props.lista.map(function(elemento){
-                return (<div> {elemento} </div>);
+                return (
+						<li key={index}>
+							{elemento}
+							<button className="btn" onClick={borraElementos}>
+								<i className="fas fa-trash-alt" />
+							</button>
+						</li>
+				);
             })}
-		</div>
 	);
 };
 

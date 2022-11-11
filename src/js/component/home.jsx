@@ -11,11 +11,15 @@ const Home = () => {
 	}
 
 	function sumaToDo(evento){
-		if (evento.keyCode == 13) {
-			setlista([].concat(lista, [evento.target.value]));
+		if (evento.keyCode == 13  && evento.target.value != "") {
+			setlista([...lista, evento.target.value]);
 			setInputValue("");
 		}
 	}
+
+	const borraElementos = index => {
+		setlista(lista.filter(i != index));
+	};
 
 	return (
 		<div>
@@ -28,7 +32,9 @@ const Home = () => {
 						<input className="cajaInput" type="text" onChange={asigna} value={inputValue} onKeyDown={sumaToDo}/>
 					</div>
 					<div>
-						<ElementoLista lista={lista} />
+						<ul>
+							<ElementoLista lista={lista} />
+						</ul>
 					</div>
 				</div>
 			</div>
