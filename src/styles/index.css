@@ -28,7 +28,6 @@ body{
     padding-top: 10px;
     font-size: xx-large;
     color: aliceblue;
-    border: 1px solid red;
 }
 
 .tarjeta{
@@ -37,7 +36,6 @@ body{
     background-color: rgb(254, 255, 255);
     margin-left: 25px;
     border-radius: 5px;
-    border: 1px solid red;
 }
 
 .cajaInput{

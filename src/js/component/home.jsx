@@ -17,10 +17,6 @@ const Home = () => {
 		}
 	}
 
-	const borraElementos = index => {
-		setlista(lista.filter(i != index));
-	};
-
 	return (
 		<div>
 			<div className="cajaBlanca">
@@ -32,9 +28,7 @@ const Home = () => {
 						<input className="cajaInput" type="text" onChange={asigna} value={inputValue} onKeyDown={sumaToDo}/>
 					</div>
 					<div>
-						<ul>
 							<ElementoLista lista={lista} />
-						</ul>
 					</div>
 				</div>
 			</div>
