@@ -1,18 +1,19 @@
 import React, {useState } from "react";
 import ElementoLista from "./elementoLista.jsx";
+import Total from "./total.jsx";
 
 //create your first component
 const Home = () => {
 	const [inputValue, setInputValue ] = useState('');
-	const [lista, setlista ] = useState(["numero 1"]);
+	const [lista, setLista ] = useState([]);
 
 	function asigna(evento){
 		setInputValue(evento.target.value);
 	}
 
 	function sumaToDo(evento){
-		if (evento.keyCode == 13  && evento.target.value != "") {
-			setlista([...lista, evento.target.value]);
+		if (evento.keyCode == 13 && evento.target.value != "") {
+			setLista([...lista, evento.target.value]);
 			setInputValue("");
 		}
 	}
@@ -24,11 +25,13 @@ const Home = () => {
 					<p className="titulo">todos</p>
 				</div>
 				<div className="tarjeta">
-					<div>
+					<div className="soporteCaja">
 						<input className="cajaInput" type="text" onChange={asigna} value={inputValue} onKeyDown={sumaToDo}/>
 					</div>
 					<div>
-							<ElementoLista lista={lista} />
+						<ElementoLista lista={lista} setLista={setLista} />
+						<hr />
+						<Total total={lista.length} />
 					</div>
 				</div>
 			</div>

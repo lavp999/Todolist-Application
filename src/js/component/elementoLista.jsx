@@ -1,24 +1,21 @@
 import React from "react";
 
-const borraElementos = elemento => {
-	setlista(lista.filter(i != elemento));
+const borraElementos = (elemento) => {
+	setLista(lista.filter((e, i) => i != elemento));
 };
 
-const listaItems = (miArray) => miArray.map((elemento, index) => {
-									console.log(elemento, index);
-									return (<li >
-												<div className="divLi">
-													<p>{elemento}</p>
-													<button className="btn" onClick={borraElementos}> <i className="fas fa-trash-alt" /></button>
-												</div>
-											</li>
+const listaItems = (miArray, miFunc) => miArray.map((elemento, index) => {
+									return (<div className="divTareas" id={`dv-${index}`} >
+												<p>{elemento}</p>
+												<button className="btn" id={`bt-${index}`} onClick={()=>miFunc(miArray.filter((e, i) => i != index))}> <i className="fas fa-trash-alt" /> </button>
+											</div>
 											)
 								});
 								
 const ElementoLista = (props) => {
-	return (<ul>
-			{listaItems(props.lista)}
-			</ul>
+	return (<>
+				{listaItems(props.lista, props.setLista)}
+			</>
 			);
 };
 
